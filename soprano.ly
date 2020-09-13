@@ -1,12 +1,14 @@
-\version "2.21.2"
+\version "2.20.0"
 \include "soprano_impl.ly"
  #(set-global-staff-size 19)
 
 \book {
   \header{
-    title="BWV 1080 Contrapunctus 3"
+    title = "Die Kunst der Fuge, BWV 1080"
     composer="J. S. Bach"
-    instrument="soprano recorder"
+    instrument="Soprano recorder"
+    subtitle = "Contrapunctus 3"
+    copyright = "https://github.com/gymno/BWV1080-3"
   }
 
 
@@ -17,12 +19,7 @@
       \on-the-fly #not-first-page \fromproperty #'header:title 
       \on-the-fly #print-page-number-check-first \fromproperty #'page:page-number-string     
     }
-    evenHeaderMarkup = \markup \fill-line
-    { 
-      \on-the-fly #print-page-number-check-first \fromproperty #'page:page-number-string 
-      \on-the-fly #not-first-page \fromproperty #'header:title 
-      \on-the-fly #not-first-page \fromproperty #'header:instrument 
-    }
+    evenHeaderMarkup = \oddHeaderMarkup
   }
   
   \score {
@@ -30,13 +27,8 @@
     \layout { 
       \context {
         \Score
-        \override SpacingSpanner #'spacing-increment = #3
+        \override SpacingSpanner #'spacing-increment = #2
       }
-    }
-  }
-  \bookpart {
-    \header {
-      subtitle="aaaa"
     }
   }
 }

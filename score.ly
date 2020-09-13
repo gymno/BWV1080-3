@@ -1,4 +1,4 @@
-\version "2.21.2"
+\version "2.20.0"
 
 \include "soprano_impl.ly"
 \include "alto_impl.ly"
@@ -24,9 +24,11 @@ music = {
 #(set-global-staff-size 14)
 \book {
   \header{
-    title="BWV 1080 Contrapunctus 3"
-    composer="J.S.Bach"
-%%    instrument="soprano (alto) recorder"
+    title = "Die Kunst der Fuge, BWV 1080"
+    composer = "J. S. Bach"
+    instrument = "SATB"
+    subtitle = "Contrapunctus 3"
+    copyright = "https://github.com/gymno/BWV1080-3"
   }
 
 
@@ -37,12 +39,7 @@ music = {
       \on-the-fly #not-first-page \fromproperty #'header:title 
       \on-the-fly #print-page-number-check-first \fromproperty #'page:page-number-string     
     }
-    evenHeaderMarkup = \markup \fill-line
-    { 
-      \on-the-fly #print-page-number-check-first \fromproperty #'page:page-number-string 
-      \on-the-fly #not-first-page \fromproperty #'header:title 
-      \on-the-fly #not-first-page \fromproperty #'header:instrument 
-    }
+    evenHeaderMarkup = \oddHeaderMarkup
   }
 
   \score {

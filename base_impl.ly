@@ -1,6 +1,6 @@
 \version "2.21.2"
 
-base=\new Voice { \relative c'{
+base=\new Voice \compressMMRests { \relative c'{
   \set Staff.instrumentName=#"Bass"
   \set Staff.midiInstrument = #"recorder"
   \time 2/2
@@ -10,7 +10,7 @@ base=\new Voice { \relative c'{
 
 %\set Score.skipTypesetting = ##t
   %%0
-  R1*9^"base"|R1|
+  R1*9|R1|
   %%10
   r8 b c d e fis gis e|a4 g? f? e|d8 r r4 r2|R1|
   a'2 d,|f a|bes a4 g|f2~ f8 e f g|a a, r a bes a b cis|
