@@ -1,7 +1,7 @@
 
 
 
-Objects = soprano.pdf alto.pdf tenor.pdf base.pdf
+Objects = soprano.pdf alto.pdf tenor.pdf base.pdf SA.pdf TB.pdf
 Lilyfiles = score.ly alto.ly base.ly sample.ly soprano.ly tenor.ly\
 			alto_impl.ly base_impl.ly soprano_impl.ly tenor_impl.ly
 all: prog
