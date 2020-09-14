@@ -7,7 +7,6 @@ base=\new Voice \compressMMRests { \relative c'{
   \key d \minor
   \clef "bass^8"
 
-
 %\set Score.skipTypesetting = ##t
   %%0
   R1*9|R1|
