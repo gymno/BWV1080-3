@@ -31,9 +31,9 @@ music = {
   \paper {
     oddHeaderMarkup = \markup \fill-line
     { 
-      \on-the-fly #not-first-page \fromproperty #'header:instrument 
-      \on-the-fly #not-first-page \fromproperty #'header:title 
-      \on-the-fly #print-page-number-check-first \fromproperty #'page:page-number-string     
+      \unless \on-first-page \fromproperty #'header:instrument 
+      \unless \on-first-page \fromproperty #'header:title 
+      \if \should-print-page-number \fromproperty #'page:page-number-string    
     }
     evenHeaderMarkup = \oddHeaderMarkup
   }
