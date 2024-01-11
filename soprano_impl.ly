@@ -1,4 +1,4 @@
-\version "2.21.2"
+\version "2.24.0"
 
 soprano=\new Voice \compressMMRests { \relative c'''{
   \set Staff.instrumentName=#"Soprano"

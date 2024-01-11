@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.24.0"
 \include "base_impl.ly"
 
  #(set-global-staff-size 19)
@@ -28,7 +28,7 @@
     \layout { 
       \context {
         \Score
-        \override SpacingSpanner #'spacing-increment = #2
+        \override SpacingSpanner.spacing-increment = #2
       }
     }
   }

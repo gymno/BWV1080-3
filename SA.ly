@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.24.0"
 
 \include "soprano_impl.ly"
 \include "alto_impl.ly"
@@ -43,7 +43,7 @@ music = {
     \layout {
       \Score
       tempoWholesPerMinute = #(ly:make-moment 120 4)
-      \override SpacingSpanner #'spacing-increment = #3
+      \override SpacingSpanner.spacing-increment = #3
     }
   }
 }
